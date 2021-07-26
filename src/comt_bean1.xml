@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="stu" class="comt.gxx.spring5.collectiontype.Stu">
+        <property name="courses">
+            <array>
+                <value>java 课程</value>
+                <value>数据库课程</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>张三</value>
+                <value>小三</value>
+            </list>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="JAVA" value="java"></entry>
+                <entry key="PHP" value="php"></entry>
+            </map>
+        </property>
+
+        <property name="sets">
+            <set>
+                <value>MySQL</value>
+                <value>Redis</value>
+            </set>
+        </property>
+
+        <property name="coursesList">
+            <list>
+                <ref bean="courese1"></ref>
+                <ref bean="courese2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="courese1" class="comt.gxx.spring5.collectiontype.Course">
+        <property name="cname" value="Spring5框架"></property>
+    </bean>
+    <bean id="courese2" class="comt.gxx.spring5.collectiontype.Course">
+        <property name="cname" value="MyBatis框架"></property>
+    </bean>
+</beans>
