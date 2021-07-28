@@ -3,8 +3,9 @@ package jdbc.gxx.spring5.service;
 import jdbc.gxx.spring5.dao.BookDao;
 import jdbc.gxx.spring5.entity.Book;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author gxx
@@ -26,5 +27,17 @@ public class BookService {
 
     public void delete(String id) {
         bookDao.delete(id);
+    }
+
+    public int findCount() {
+        return bookDao.selectCount();
+    }
+
+    public Book findOne(String id) {
+        return bookDao.findBookInfo(id);
+    }
+
+    public List<Book> findAll() {
+        return bookDao.findAllBook();
     }
 }

@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 /**
  * @author gxx
  * @create 2021-07-28 9:57
@@ -29,6 +31,15 @@ public class TestBook {
 //        book.setUstatus("gxxxxxxxxx");
 //        bookService.updateBook(book);
 
-        bookService.delete("1");
+//        bookService.delete("1");
+
+//        int count = bookService.findCount();
+//        System.out.println(count);
+
+//        Book book = bookService.findOne("1");
+//        System.out.println(book);
+
+        List<Book> list = bookService.findAll();
+        System.out.println(list);
     }
 }
