@@ -9,15 +9,21 @@ import java.util.List;
  * @create 2021-07-28 9:31
  */
 public interface BookDao {
-    public void add(Book book);
+    void add(Book book);
 
-    public void updateBook(Book book);
+    void updateBook(Book book);
 
-    public void delete(String id);
+    void delete(String id);
 
-    public int selectCount();
+    int selectCount();
 
-    public Book findBookInfo(String id);
+    Book findBookInfo(String id);
 
-    public List<Book> findAllBook();
+    List<Book> findAllBook();
+
+    void batchAddBook(List<Object[]> batchArgs);
+
+    void batchUpdateBook(List<Object[]> batchArgs);
+
+    void batchDeleteBook(List<Object[]> batchArgs);
 }

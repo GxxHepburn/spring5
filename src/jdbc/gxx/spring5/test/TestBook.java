@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -39,7 +40,32 @@ public class TestBook {
 //        Book book = bookService.findOne("1");
 //        System.out.println(book);
 
-        List<Book> list = bookService.findAll();
-        System.out.println(list);
+//        List<Book> list = bookService.findAll();
+//        System.out.println(list);
+
+//        List<Object[]> batchArgs = new ArrayList<>();
+//        Object[] o1 = {"3", "ccccc", "c"};
+//        Object[] o2 = {"4", "dddddd", "d"};
+//        Object[] o3 = {"5", "eeeeeee", "e"};
+//        batchArgs.add(o1);
+//        batchArgs.add(o2);
+//        batchArgs.add(o3);
+//        bookService.batchAdd(batchArgs);
+
+//        List<Object[]> batchArgs = new ArrayList<>();
+//        Object[] o1 = {"c+update", "c", "3"};
+//        Object[] o2 = {"d+update", "d", "4"};
+//        Object[] o3 = {"e+update", "e", "5"};
+//        batchArgs.add(o1);
+//        batchArgs.add(o2);
+//        batchArgs.add(o3);
+//        bookService.batchUpdate(batchArgs);
+
+        List<Object[]> batchArgs = new ArrayList<>();
+        Object[] o1 = {"3"};
+        Object[] o2 = {"4"};
+        batchArgs.add(o1);
+        batchArgs.add(o2);
+        bookService.batchDelete(batchArgs);
     }
 }
