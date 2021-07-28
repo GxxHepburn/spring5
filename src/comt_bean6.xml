@@ -11,7 +11,7 @@
 <!--        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>-->
 <!--        <property name="url" value="jdbc:mysql://localhost:3306/crm"></property>-->
 <!--        <property name="username" value="gxx"></property>-->
-<!--        <property name="password" value="guo027437."></property>-->
+<!--        <property name="password" value=""></property>-->
 <!--    </bean>-->
 
     <context:property-placeholder location="classpath:jdbc.properties"/>
@@ -20,6 +20,6 @@
         <property name="driverClassName" value="${prop.driverClass}"></property>
         <property name="url" value="${prop.url}"></property>
         <property name="username" value="${prop.userName}"></property>
-        <property name="password" value="${prop.password}"></property>
+        <property name="password" value=""></property>
     </bean>
 </beans>
